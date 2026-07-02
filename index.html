@@ -1,0 +1,728 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ammar — Frontend Web Developer</title>
+    <meta
+      name="description"
+      content="Ammar is a frontend web developer from Mansoura, Egypt, building fast, modern, responsive interfaces."
+    />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Styles: base -->
+    <link rel="stylesheet" href="css/base/reset.css" />
+    <link rel="stylesheet" href="css/base/variables.css" />
+    <link rel="stylesheet" href="css/base/typography.css" />
+    <!-- Styles: components -->
+    <link rel="stylesheet" href="css/components/navbar.css" />
+    <link rel="stylesheet" href="css/components/buttons.css" />
+    <link rel="stylesheet" href="css/components/cards.css" />
+    <link rel="stylesheet" href="css/components/forms.css" />
+    <link rel="stylesheet" href="css/components/footer.css" />
+    <!-- Styles: sections -->
+    <link rel="stylesheet" href="css/sections/hero.css" />
+    <link rel="stylesheet" href="css/sections/about.css" />
+    <link rel="stylesheet" href="css/sections/projects.css" />
+    <link rel="stylesheet" href="css/sections/skills.css" />
+    <link rel="stylesheet" href="css/sections/services.css" />
+    <link rel="stylesheet" href="css/sections/contact.css" />
+    <!-- Styles: utils -->
+    <link rel="stylesheet" href="css/utils/animations.css" />
+    <link rel="stylesheet" href="css/utils/utilities.css" />
+  </head>
+  <body>
+    <a class="visually-hidden" href="#home">Skip to content</a>
+
+    <!-- ============================== NAVBAR ============================== -->
+    <header class="navbar">
+      <div class="container navbar__inner">
+        <a href="#home" class="navbar__logo">
+          <span class="navbar__logo-mark">
+            <img src="./assets/mypic.png" alt="my picture" />
+          </span>
+          Ammar
+        </a>
+
+        <nav class="navbar__links" id="navLinks">
+          <a class="navbar__link" href="#home">Home</a>
+          <a class="navbar__link" href="#about">About</a>
+          <a class="navbar__link" href="#projects">Projects</a>
+          <a class="navbar__link" href="#skills">Skills</a>
+          <a class="navbar__link" href="#services">Services</a>
+          <a class="navbar__link" href="#contact">Contact</a>
+        </nav>
+
+        <button
+          class="navbar__toggle"
+          aria-label="Toggle menu"
+          aria-expanded="false"
+          aria-controls="navLinks"
+        >
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <!-- ============================== HERO ============================== -->
+      <section class="hero" id="home">
+        <div class="hero__glow" aria-hidden="true"></div>
+        <div class="container hero__inner">
+          <div class="hero__content">
+            <span class="hero__greeting">Hello, I'm</span>
+            <h1 class="hero__name">
+              Ammar<span class="text-gradient">.</span>
+            </h1>
+            <p class="hero__role">Frontend Web Developer</p>
+            <p class="hero__desc">
+              I build clean, fast and responsive interfaces for the web —
+              turning designs into interactive, production-ready experiences
+              with modern HTML, CSS and JavaScript.
+            </p>
+
+            <div class="hero__actions">
+              <a href="#projects" class="btn btn--primary">View Projects</a>
+              <a href="#contact" class="btn btn--ghost">Contact Me</a>
+            </div>
+
+            <div class="hero__meta">
+              <div class="hero__meta-item">
+                <strong>19</strong>
+                <span>Years Old</span>
+              </div>
+              <div class="hero__meta-item">
+                <strong>Mansoura</strong>
+                <span>Egypt</span>
+              </div>
+              <div class="hero__meta-item">
+                <strong>Frontend</strong>
+                <span>Specialization</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero__visual">
+            <div class="code-window">
+              <div class="code-window__bar">
+                <span class="code-window__dot code-window__dot--r"></span>
+                <span class="code-window__dot code-window__dot--y"></span>
+                <span class="code-window__dot code-window__dot--g"></span>
+                <span class="code-window__title">developer.js</span>
+              </div>
+              <pre
+                class="code-window__body"
+              ><code><span class="ln">1</span><span class="kw">const</span> developer = {
+<span class="ln">2</span>  name: <span class="str">'Ammar'</span>,
+<span class="ln">3</span>  <span class="prop">role</span>: <span class="str">'Frontend Developer'</span>,
+<span class="ln">4</span>  <span class="prop">based</span>: <span class="str">'Mansoura, Egypt'</span>,
+<span class="ln">5</span>  <span class="prop">stack</span>: [<span class="str">'HTML'</span>, <span class="str">'CSS'</span>, <span class="str">'JS'</span>],
+<span class="ln">6</span>  <span class="fn">isAvailable</span>: () => <span class="kw">true</span>,
+<span class="ln">7</span>};<span class="cursor"></span></code></pre>
+            </div>
+            <div class="hero__badge glass">
+              <span class="hero__badge-dot"></span>
+              Open to work
+            </div>
+          </div>
+        </div>
+
+        <a
+          href="#about"
+          class="hero__scroll-cue"
+          aria-label="Scroll to About section"
+        >
+          <span class="hero__scroll-cue-line"></span>
+          Scroll
+        </a>
+      </section>
+
+      <!-- ============================== ABOUT ============================== -->
+      <section class="section-alt" id="about">
+        <div class="container">
+          <div class="section-heading" data-reveal="fade">
+            <span class="eyebrow">// About</span>
+            <h2>A closer look</h2>
+          </div>
+
+          <div class="about__inner">
+            <div class="about__facts" data-reveal-group>
+              <div class="about__fact" data-reveal>
+                <span class="about__fact-icon">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.6"
+                  >
+                    <circle cx="12" cy="8" r="4" />
+                    <path d="M4 20c0-4.4 3.6-7 8-7s8 2.6 8 7" />
+                  </svg>
+                </span>
+                <div>
+                  <strong>19 years old</strong
+                  ><span>Early-career, growing fast</span>
+                </div>
+              </div>
+              <div class="about__fact" data-reveal>
+                <span class="about__fact-icon">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.6"
+                  >
+                    <path
+                      d="M12 21s-7-5.5-7-11a7 7 0 0 1 14 0c0 5.5-7 11-7 11z"
+                    />
+                    <circle cx="12" cy="10" r="2.5" />
+                  </svg>
+                </span>
+                <div>
+                  <strong>Mansoura, Egypt</strong><span>Based in Dakahlia</span>
+                </div>
+              </div>
+              <div class="about__fact" data-reveal>
+                <span class="about__fact-icon">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.6"
+                  >
+                    <path d="M4 6l8-3 8 3-8 3-8-3z" />
+                    <path d="M4 6v9l8 3 8-3V6" />
+                  </svg>
+                </span>
+                <div>
+                  <strong>Frontend Developer</strong
+                  ><span>HTML · CSS · JavaScript</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="about__text" data-reveal="right">
+              <p>
+                I'm <strong>Ammar</strong>, a 19-year-old frontend web developer
+                based in <strong>Mansoura, Egypt</strong>. I focus on building
+                interfaces that are fast, accessible and pleasant to use —
+                paying close attention to layout, typography and the small
+                interactions that make a site feel considered rather than
+                assembled.
+              </p>
+              <p>
+                My work centers on clean, semantic markup and CSS that scales,
+                backed by vanilla JavaScript I understand end to end. I enjoy
+                translating a design into a responsive, production-ready build,
+                and I'm currently taking on freelance projects — from business
+                sites to admin dashboards and management systems.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================== PROJECTS ============================== -->
+      <section id="projects">
+        <div class="container">
+          <div class="section-heading" data-reveal="fade">
+            <span class="eyebrow">// Projects</span>
+            <h2>Selected work</h2>
+            <p>A few of the builds I've shipped or am currently shaping.</p>
+          </div>
+
+          <div class="projects__grid" data-reveal-group>
+            <article class="card project-card" data-reveal>
+              <div class="project-card__media">
+                <img src="./assets/clinicsys.png" alt="Clinic system picture" />
+              </div>
+              <div class="project-card__body">
+                <span class="project-card__tag">Web App</span>
+                <h3>Clinic Management System</h3>
+                <p class="project-card__desc">
+                  A system for managing patients, appointments and records,
+                  built with a focus on a clear, dependable interface for daily
+                  clinical use.
+                </p>
+                <div class="project-card__stack">
+                  <span class="chip">HTML5</span>
+                  <span class="chip">CSS3</span>
+                  <span class="chip">JavaScript</span>
+                </div>
+                <div class="project-card__actions">
+                  <a
+                    href="https://github.com/ammarayman32/Clinic-Project"
+                    target="_blank"
+                    class="btn btn--ghost btn--sm"
+                    >GitHub</a
+                  >
+                  <a
+                    href="https://ammarayman32.github.io/Clinic-Project/"
+                    target="_blank"
+                    class="btn btn--primary btn--sm"
+                    >Live Demo</a
+                  >
+                </div>
+              </div>
+            </article>
+
+            <article class="card project-card" data-reveal>
+              <div class="project-card__media">
+                <img src="./assets/gymsys.png" alt="" />
+              </div>
+              <div class="project-card__body">
+                <span class="project-card__tag">Web App</span>
+                <h3>Gym Management System</h3>
+                <p class="project-card__desc">
+                  A system for managing members, subscriptions and attendance,
+                  built with a focus on an intuitive interface and efficient
+                  daily gym operations.
+                </p>
+                <div class="project-card__stack">
+                  <span class="chip">HTML5</span>
+                  <span class="chip">CSS3</span>
+                  <span class="chip">JavaScript</span>
+                </div>
+                <div class="project-card__actions">
+                  <a
+                    href="https://github.com/ammarayman32/Gym-Management-System"
+                    target="_blank"
+                    class="btn btn--ghost btn--sm"
+                    >GitHub</a
+                  >
+                  <a
+                    href="https://ammarayman32.github.io/Gym-Management-System/"
+                    target="_blank"
+                    class="btn btn--primary btn--sm"
+                    >Live Demo</a
+                  >
+                </div>
+              </div>
+            </article>
+
+            <article class="card project-card" data-reveal>
+              <div class="project-card__media">
+                <svg
+                  width="52"
+                  height="52"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.4"
+                >
+                  <path d="M12 3l9 4.5v9L12 21l-9-4.5v-9L12 3z" />
+                </svg>
+              </div>
+              <div class="project-card__body">
+                <span class="project-card__tag">Coming soon</span>
+                <h3>Project Three</h3>
+                <p class="project-card__desc">
+                  Details for this project are on the way — check back soon for
+                  the full case study.
+                </p>
+                <div class="project-card__stack">
+                  <span class="chip">TBA</span>
+                </div>
+                <div class="project-card__actions">
+                  <a href="#" class="btn btn--ghost btn--sm">GitHub</a>
+                  <a href="#" class="btn btn--primary btn--sm">Live Demo</a>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================== SKILLS ============================== -->
+      <section class="section-alt" id="skills">
+        <div class="container">
+          <div class="section-heading" data-reveal="fade">
+            <span class="eyebrow">// Skills</span>
+            <h2>Tools I work with</h2>
+          </div>
+
+          <div class="skills__grid" data-reveal-group>
+            <div class="card skill-card" data-reveal>
+              <span class="skill-card__icon">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                >
+                  <path d="M4 3l1.5 17L12 22l6.5-2L20 3H4z" />
+                  <path d="M7.5 7h9l-.4 4.5H9.3l.2 2.5 2.5.8 2.5-.8.2-2" />
+                </svg>
+              </span>
+              <span class="skill-card__name">HTML5</span>
+            </div>
+
+            <div class="card skill-card" data-reveal>
+              <span class="skill-card__icon">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                >
+                  <path d="M4 3l1.5 17L12 22l6.5-2L20 3H4z" />
+                  <path
+                    d="M16.5 7H8l.3 3.4h7.9l-.4 4.6-3.8 1.1-3.8-1.1-.2-2.3"
+                  />
+                </svg>
+              </span>
+              <span class="skill-card__name">CSS3</span>
+            </div>
+
+            <div class="card skill-card" data-reveal>
+              <span class="skill-card__icon">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                >
+                  <rect x="3" y="3" width="18" height="18" rx="2" />
+                  <path
+                    d="M8 15.5c.3.7.9 1.2 1.8 1.2 1.1 0 1.7-.6 1.7-1.6V9.5"
+                  />
+                  <path
+                    d="M14 15c.3.6 1 1 1.8 1 1.1 0 1.7-.5 1.7-1.3 0-1.7-3-1.2-3-3 0-.9.7-1.4 1.6-1.4.8 0 1.3.4 1.6 1"
+                  />
+                </svg>
+              </span>
+              <span class="skill-card__name">JavaScript</span>
+            </div>
+
+            <div class="card skill-card" data-reveal>
+              <span class="skill-card__icon">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                >
+                  <path d="M12 2l9 9-9 9-9-9 9-9z" />
+                  <path d="M12 6v5l4 2" />
+                </svg>
+              </span>
+              <span class="skill-card__name">Git</span>
+            </div>
+
+            <div class="card skill-card" data-reveal>
+              <span class="skill-card__icon">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                >
+                  <path
+                    d="M12 2a10 10 0 0 0-3.2 19.5c.5.1.7-.2.7-.5v-1.8c-2.8.6-3.4-1.3-3.4-1.3-.5-1.2-1.1-1.5-1.1-1.5-.9-.6.1-.6.1-.6 1 .1 1.5 1 1.5 1 .9 1.5 2.3 1.1 2.9.8.1-.7.4-1.1.6-1.4-2.2-.3-4.6-1.1-4.6-5 0-1.1.4-2 1-2.7-.1-.3-.5-1.3.1-2.7 0 0 .8-.3 2.7 1a9.4 9.4 0 0 1 5 0c1.9-1.3 2.7-1 2.7-1 .6 1.4.2 2.4.1 2.7.6.7 1 1.6 1 2.7 0 3.9-2.4 4.7-4.6 5 .4.3.7 1 .7 2v2.9c0 .3.2.6.7.5A10 10 0 0 0 12 2z"
+                  />
+                </svg>
+              </span>
+              <span class="skill-card__name">GitHub</span>
+            </div>
+
+            <div class="card skill-card" data-reveal>
+              <span class="skill-card__icon">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                >
+                  <rect x="3" y="4" width="10" height="16" rx="1.5" />
+                  <rect x="15" y="4" width="6" height="9" rx="1.5" />
+                </svg>
+              </span>
+              <span class="skill-card__name">Responsive Design</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================== SERVICES ============================== -->
+      <section id="services">
+        <div class="container">
+          <div class="section-heading" data-reveal="fade">
+            <span class="eyebrow">// Services</span>
+            <h2>What I can build for you</h2>
+          </div>
+
+          <div class="services__grid" data-reveal-group>
+            <div class="card service-card" data-reveal>
+              <span class="service-card__icon">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.6"
+                >
+                  <path d="M3 9.5L12 3l9 6.5" />
+                  <path d="M5 9v11h14V9" />
+                  <path d="M9 20v-6h6v6" />
+                </svg>
+              </span>
+              <h3>Business Websites</h3>
+              <p class="service-card__desc">
+                Fast, professional websites that represent your brand and
+                convert visitors into customers.
+              </p>
+            </div>
+
+            <div class="card service-card" data-reveal>
+              <span class="service-card__icon">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.6"
+                >
+                  <rect x="3" y="4" width="18" height="12" rx="2" />
+                  <path d="M8 20h8" />
+                  <path d="M9 8h3v5H9zM14.5 10h1.5v3h-1.5z" />
+                </svg>
+              </span>
+              <h3>Admin Dashboards</h3>
+              <p class="service-card__desc">
+                Organized, data-friendly dashboards that make day-to-day
+                operations easier to manage.
+              </p>
+            </div>
+
+            <div class="card service-card" data-reveal>
+              <span class="service-card__icon">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.6"
+                >
+                  <rect x="4" y="3" width="16" height="18" rx="2" />
+                  <path d="M9 7h6M9 11h6M9 15h3" />
+                </svg>
+              </span>
+              <h3>Clinic Management Systems</h3>
+              <p class="service-card__desc">
+                Custom systems for patient records, scheduling and clinic
+                operations.
+              </p>
+            </div>
+
+            <div class="card service-card" data-reveal>
+              <span class="service-card__icon">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.6"
+                >
+                  <rect x="3" y="4" width="18" height="16" rx="2" />
+                  <path d="M3 9h18" />
+                </svg>
+              </span>
+              <h3>Responsive Landing Pages</h3>
+              <p class="service-card__desc">
+                Focused, high-converting landing pages that look sharp on every
+                screen size.
+              </p>
+            </div>
+
+            <div class="card service-card" data-reveal>
+              <span class="service-card__icon">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.6"
+                >
+                  <path d="M8 9l-4 3 4 3M16 9l4 3-4 3M13 5l-2 14" />
+                </svg>
+              </span>
+              <h3>Frontend Development</h3>
+              <p class="service-card__desc">
+                Clean, maintainable HTML, CSS and JavaScript builds from your
+                designs or ideas.
+              </p>
+            </div>
+
+            <div class="card service-card" data-reveal>
+              <span class="service-card__icon">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.6"
+                >
+                  <path
+                    d="M4 9v6M2.5 10.5v3M20 9v6M21.5 10.5v3M7 8v8M17 8v8M9 12h6"
+                  />
+                </svg>
+              </span>
+              <h3>Gym Management System</h3>
+              <p class="service-card__desc">
+                Cusom systems for members subscriptions, prices and
+                subscriptions packages.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================== CONTACT ============================== -->
+      <section class="section-alt" id="contact">
+        <div class="container">
+          <div class="section-heading" data-reveal="fade">
+            <span class="eyebrow">// Contact</span>
+            <h2>Let's work together</h2>
+            <p>
+              Have a project in mind? Send a message and I'll get back to you.
+            </p>
+          </div>
+
+          <div class="contact__inner">
+            <div class="contact__info" data-reveal="left">
+              <div class="contact__item">
+                <span class="contact__item-icon">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.6"
+                  >
+                    <rect x="3" y="5" width="18" height="14" rx="2" />
+                    <path d="M3 7l9 6 9-6" />
+                  </svg>
+                </span>
+                <div>
+                  <strong>Email</strong>
+                  <a href="mailto:ammarayman3469@gmail.com"
+                    >ammarayman3469@gmail.com</a
+                  >
+                </div>
+              </div>
+
+              <div class="contact__item">
+                <span class="contact__item-icon">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.6"
+                  >
+                    <path
+                      d="M4 4l4-1 2 5-2 1a12 12 0 0 0 6 6l1-2 5 2-1 4c-6 1-14-7-15-15z"
+                    />
+                  </svg>
+                </span>
+                <div>
+                  <strong>Phone</strong>
+                  <a href="tel:+201033968299">+20 103 396 8299</a>
+                </div>
+              </div>
+
+              <div class="contact__item">
+                <span class="contact__item-icon">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.6"
+                  >
+                    <path
+                      d="M12 21s-7-5.5-7-11a7 7 0 0 1 14 0c0 5.5-7 11-7 11z"
+                    />
+                    <circle cx="12" cy="10" r="2.5" />
+                  </svg>
+                </span>
+                <div>
+                  <strong>Location</strong>
+                  <span>Mansoura, Egypt</span>
+                </div>
+              </div>
+            </div>
+
+            <form
+              class="card contact__form"
+              id="contact-form"
+              data-reveal="right"
+              novalidate
+            >
+              <div class="form-field">
+                <label for="name">Name</label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  placeholder="Your name"
+                  autocomplete="name"
+                  required
+                />
+              </div>
+              <div class="form-field">
+                <label for="email">Email</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="you@example.com"
+                  autocomplete="email"
+                  required
+                />
+              </div>
+              <div class="form-field">
+                <label for="message">Message</label>
+                <textarea
+                  id="message"
+                  name="message"
+                  placeholder="Tell me about your project..."
+                  required
+                ></textarea>
+              </div>
+              <button type="submit" class="btn btn--primary btn--block">
+                Send Message
+              </button>
+              <p class="form-status" role="status" aria-live="polite"></p>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ============================== FOOTER ============================== -->
+    <footer class="footer">
+      <div class="container footer__inner">
+        <span class="footer__brand">Ammar</span>
+        <span class="footer__copy"
+          >&copy; <span id="year"></span> Ammar. All rights reserved.</span
+        >
+        <button class="back-to-top" aria-label="Back to top">
+          <svg
+            viewBox="0 0 24 24"
+            width="18"
+            height="18"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <path d="M12 19V5M5 12l7-7 7 7" />
+          </svg>
+        </button>
+      </div>
+    </footer>
+
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+    <script type="module" src="js/main.js"></script>
+  </body>
+</html>

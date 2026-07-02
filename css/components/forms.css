@@ -1,0 +1,47 @@
+/* ==========================================================================
+   FORMS
+   ========================================================================== */
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3xs);
+  margin-bottom: var(--space-sm);
+}
+
+.form-field label {
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  color: var(--text-muted);
+}
+
+.form-field input,
+.form-field textarea {
+  padding: 0.85rem 1rem;
+  background: var(--bg-2);
+  border: 1px solid var(--surface-border);
+  border-radius: var(--radius-sm);
+  color: var(--text-primary);
+  font-size: var(--fs-sm);
+  transition: border-color var(--t-fast), box-shadow var(--t-fast);
+}
+
+.form-field input::placeholder,
+.form-field textarea::placeholder { color: var(--text-muted); }
+
+.form-field input:focus,
+.form-field textarea:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px var(--blue-glow);
+  outline: none;
+}
+
+.form-field textarea { resize: vertical; min-height: 130px; }
+
+.form-status {
+  font-size: var(--fs-sm);
+  margin-top: var(--space-xs);
+  min-height: 1.2em;
+  color: var(--accent-soft);
+}
+
+.form-status[data-state="error"] { color: #ff8080; }

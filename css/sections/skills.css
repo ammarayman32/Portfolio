@@ -1,0 +1,16 @@
+/* ==========================================================================
+   SKILLS
+   ========================================================================== */
+.skills__grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: var(--space-sm);
+}
+
+@media (max-width: 980px) {
+  .skills__grid { grid-template-columns: repeat(3, 1fr); }
+}
+
+@media (max-width: 560px) {
+  .skills__grid { grid-template-columns: repeat(2, 1fr); }
+}

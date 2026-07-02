@@ -1,0 +1,161 @@
+/* ==========================================================================
+   CARDS (shared base for project / skill / service cards)
+   ========================================================================== */
+.card {
+  background: var(--surface-1);
+  border: 1px solid var(--surface-border);
+  border-radius: var(--radius-md);
+  transition:
+    transform var(--t-med),
+    border-color var(--t-med),
+    box-shadow var(--t-med);
+  position: relative;
+  overflow: hidden;
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    320px circle at var(--mx, 50%) var(--my, 0%),
+    var(--blue-glow),
+    transparent 60%
+  );
+  opacity: 0;
+  transition: opacity var(--t-med);
+  pointer-events: none;
+}
+
+.card:hover::before {
+  opacity: 1;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  border-color: #33507a;
+  box-shadow: var(--shadow-md);
+}
+
+/* ---- Project Card ---- */
+.project-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.project-card__media {
+  aspect-ratio: 16 / 10;
+  background:
+    linear-gradient(160deg, var(--bg-2), var(--surface-1)),
+    repeating-linear-gradient(135deg, transparent 0 18px, #ffffff08 18px 19px);
+  display: grid;
+  place-items: center;
+  color: var(--text-muted);
+  border-bottom: 1px solid var(--surface-border);
+}
+
+.project-card__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.project-card__body {
+  padding: var(--space-md);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2xs);
+  flex: 1;
+}
+
+.project-card__tag {
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  color: var(--accent-soft);
+}
+
+.project-card__desc {
+  font-size: var(--fs-sm);
+  margin-bottom: var(--space-2xs);
+}
+
+.project-card__stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3xs);
+  margin-bottom: var(--space-sm);
+}
+
+.chip {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  padding: 0.25rem 0.6rem;
+  border-radius: var(--radius-pill);
+  background: #ffffff0a;
+  border: 1px solid var(--surface-border);
+  color: var(--text-secondary);
+}
+
+.project-card__actions {
+  display: flex;
+  gap: var(--space-2xs);
+  margin-top: auto;
+}
+
+/* ---- Skill Card ---- */
+.skill-card {
+  padding: var(--space-md);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-xs);
+}
+
+.skill-card__icon {
+  width: 46px;
+  height: 46px;
+  display: grid;
+  place-items: center;
+  color: var(--accent-soft);
+}
+
+.skill-card__icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.skill-card__name {
+  font-size: var(--fs-sm);
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+/* ---- Service Card ---- */
+.service-card {
+  padding: var(--space-lg) var(--space-md);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.service-card__icon {
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-sm);
+  display: grid;
+  place-items: center;
+  background: linear-gradient(145deg, #16294470, #0d1b2e70);
+  border: 1px solid var(--surface-border);
+  color: var(--accent-soft);
+}
+
+.service-card__icon svg {
+  width: 24px;
+  height: 24px;
+}
+
+.service-card__desc {
+  font-size: var(--fs-sm);
+}
